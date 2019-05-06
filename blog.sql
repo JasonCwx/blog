@@ -34,8 +34,7 @@ CREATE TABLE blog_article(
   create_time DATETIME NOT NULL DEFAULT now() COMMENT '文章创建的时间',
   update_time DATETIME NOT NULL DEFAULT now() COMMENT '文章更新的时间',
   KEY title(`title`),
-  KEY category_id(`category_id`),
-  KEY tag_id(`tag_id`)
+  KEY category_id(`category_id`)
 )ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 #前台用户表
@@ -78,7 +77,6 @@ CREATE TABLE blog_comment(
   parent_id INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '回复评论时需要用到父类id',
   article_id INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '将评论和文章绑定',
   create_time DATETIME NOT NULL DEFAULT now(),
-  KEY name(`name`),
   KEY article_id(`article_id`),
   KEY parent_id(`parent_id`)
 )ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
