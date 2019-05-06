@@ -1,0 +1,12 @@
+.tp5-blog .pagination li{
+    display: inline;
+    padding-left: 10px;
+}
+
+.tp5-blog .pagination .active{
+    color:red;
+}
+
+.tp5-blog .pagination .disabled{
+    color:gray;
+}
