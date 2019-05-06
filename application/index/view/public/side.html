@@ -1,0 +1,32 @@
+<div class="widget widget-recent-posts">
+    <h3 class="widget-title">最新文章</h3>
+    <ul>
+        {volist name="newArticles" id="article"}
+        <li>
+            <a href="{:url('index/detail', ['id' => $article.id])}">{$article.title}</a>
+        </li>
+        {/volist}
+    </ul>
+</div>
+
+<div class="widget widget-category">
+    <h3 class="widget-title">分类</h3>
+    <ul>
+        {volist name="categorys" id="category"}
+        <li>
+            <a href="{:url('category/index', ['id'=>$category.id])}">{$category.name} <span class="post-count">({$category.id|getCountByCategory})</span></a>
+        </li>
+        {/volist}
+    </ul>
+</div>
+
+<div class="widget widget-tag-cloud">
+    <h3 class="widget-title">标签云</h3>
+    <ul>
+        {volist name="tags" id="tag"}
+        <li>
+            <a href="{:url('tag/index', ['id'=>$tag.id])}">{$tag.name} <span class="post-count">({$tag.id|getCountByTag})</span></a>
+        </li>
+        {/volist}
+    </ul>
+</div>

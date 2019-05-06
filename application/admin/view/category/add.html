@@ -1,0 +1,21 @@
+{include file="public/head"}
+<body>
+<div class="pd-20">
+  <div class="Huiform">
+    <form action="{:url('category/add')}" method="post">
+      <table class="table table-bg">
+        <tbody>
+          <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 分类名称：</th>
+            <td><input type="text" style="width:200px" class="input-text" value="" placeholder="" id="name" name="name"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 确定</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+{include file="public/foot"}
